@@ -1,12 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace MoodAnalyzerProblem
 {
-    class Program
+    class MoodAnalyzer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome To Mood Analyzer Problem");
+            Console.WriteLine("Welcome To the Mood Analyzer Problem");
+        }
+        public string analyseMood(string message)
+        {
+            if (message.Equals("Happy"))
+            {
+                return "Happy Mood";
+            }
+            else
+            {
+                return "Sad Mood";
+            }
+
         }
     }
 }
