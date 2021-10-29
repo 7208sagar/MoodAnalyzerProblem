@@ -4,23 +4,38 @@ using System.Text;
 
 namespace MoodAnalyzerProblem
 {
-    class MoodAnalyzer
+    public class MoodAnalyzer
     {
+        private string message;
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome To the Mood Analyzer Problem");
         }
-        public string analyseMood(string message)
+        public MoodAnalyzer()
         {
-            if (message.Equals("Happy"))
-            {
-                return "Happy Mood";
-            }
-            else
-            {
-                return "Sad Mood";
-            }
 
+        }
+        public MoodAnalyzer(String message)
+        {
+            this.message = message;
+        }
+        public string analyseMood()
+        {
+            try
+            {
+                if (message.Contains("Sad"))
+                {
+                    return "Sad";
+                }
+                else
+                {
+                    return "Happy";
+                }
+            }
+            catch
+            {
+                return "Happy";
+            }
         }
     }
 }
